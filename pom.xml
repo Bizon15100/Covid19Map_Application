@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>LetsCheck</groupId>
-    <artifactId>springboot-map-init</artifactId>
+    <artifactId>Covid19Map_Application</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Covid19Map_Application</name>
     <description>Demo project for Spring Boot</description>

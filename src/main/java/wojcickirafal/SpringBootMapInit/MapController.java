@@ -1,4 +1,4 @@
-package wojcickirafalSpringBootMapInit;
+package wojcickirafal.SpringBootMapInit;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

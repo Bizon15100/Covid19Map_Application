@@ -1,4 +1,4 @@
-package wojcickirafalSpringBootMapInit;
+package wojcickirafal.SpringBootMapInit;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;

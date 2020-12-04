@@ -1,4 +1,4 @@
-package wojcickirafalSpringBootMapInit;
+package wojcickirafal.SpringBootMapInit;
 
 import java.util.List;
 

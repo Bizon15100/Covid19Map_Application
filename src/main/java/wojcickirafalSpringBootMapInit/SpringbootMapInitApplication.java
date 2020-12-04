@@ -9,5 +9,5 @@ public class SpringbootMapInitApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringbootMapInitApplication.class, args);
     }
-    
+
 }

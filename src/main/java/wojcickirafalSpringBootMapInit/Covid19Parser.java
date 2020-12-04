@@ -14,7 +14,8 @@ import java.util.List;
 @Service
 public class Covid19Parser {
 
-    private static final String url = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv";
+    private static final String url = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_" +
+            "data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv";
 
     public List<Point> getCovidData() throws IOException {
         List<Point> points = new ArrayList<>();
@@ -24,12 +25,12 @@ public class Covid19Parser {
 
         StringReader stringReader = new StringReader(values);
         CSVParser parse = CSVFormat.DEFAULT.withFirstRecordAsHeader().parse(stringReader);
-
         for (CSVRecord strings : parse) {
             try {
                 double lat = Double.parseDouble(strings.get("Lat"));
                 double lon = Double.parseDouble(strings.get("Long"));
                 String text = strings.get(strings.size()-1);
+
                 points.add(new Point(lat, lon, text));
             } catch (NumberFormatException exception){
                 exception.printStackTrace();

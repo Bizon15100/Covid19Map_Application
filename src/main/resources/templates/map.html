@@ -23,7 +23,10 @@
 
     var points = [[${points}]];
 
-    var map = L.map('mapid').setView([52.95, 19.23], 10);
+    let current_datetime = new Date();
+    let date = ( current_datetime.getDate() - 1) + "-" + (current_datetime.getMonth() + 1) + "-" + current_datetime.getFullYear()
+
+    var map = L.map('mapid').setView([150, 70], 3);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -31,16 +34,13 @@
 
     points.forEach(value => {
         L.marker([value.lat, value.lon]).addTo(map)
-            .bindPopup(value.text)
+            .bindPopup("Deaths in total: " + value.text + " | " + "Date: " + date )
             .openPopup();
     })
 
 
 
-
-
 </script>
-
 
 </body>
 </html>

@@ -9,7 +9,7 @@ import java.io.IOException;
 @Controller
 public class MapController {
 
-    Covid19Parser covid19Parser;
+    private final Covid19Parser covid19Parser;
 
     public MapController(Covid19Parser covid19Parser) {
         this.covid19Parser = covid19Parser;
@@ -17,7 +17,7 @@ public class MapController {
 
     @GetMapping
     public String getMap(Model model) throws IOException {
-        model.addAttribute("point", new Point(covid19Parser.getCovidData()));
+        model.addAttribute("points", covid19Parser.getCovidData());
         return "map";
     }
 }

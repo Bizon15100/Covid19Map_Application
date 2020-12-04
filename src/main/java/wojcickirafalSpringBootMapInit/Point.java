@@ -3,12 +3,11 @@ package wojcickirafalSpringBootMapInit;
 import java.util.List;
 
 public class Point {
-
     private double lat;
     private double lon;
     private String text;
 
-    public Point(List<Point> covidData) {
+    public Point() {
     }
 
     public Point(double lat, double lon, String text) {

@@ -29,7 +29,7 @@ public class Covid19Parser {
             try {
                 double lat = Double.parseDouble(strings.get("Lat"));
                 double lon = Double.parseDouble(strings.get("Long"));
-                String text = strings.get("12/3/20");
+                String text = strings.get(strings.size()-1);
                 points.add(new Point(lat, lon, text));
             } catch (NumberFormatException exception){
                 exception.printStackTrace();

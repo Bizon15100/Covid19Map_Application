@@ -11,7 +11,7 @@
     <groupId>LetsCheck</groupId>
     <artifactId>springboot-map-init</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-map-init</name>
+    <name>Covid19Map_Application</name>
     <description>Demo project for Spring Boot</description>
 
 

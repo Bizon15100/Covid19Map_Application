@@ -27,13 +27,13 @@ public class Covid19Parser {
         CSVParser parse = CSVFormat.DEFAULT.withFirstRecordAsHeader().parse(stringReader);
         for (CSVRecord strings : parse) {
             try {
-                double lat = Double.parseDouble(strings.get("Lat"));
-                double lon = Double.parseDouble(strings.get("Long"));
+                double lat = Double.parseDouble(strings.get("Lat").isBlank() ?  "0" : strings.get("Lat"));
+                double lon = Double.parseDouble(strings.get("Long").isBlank()  ? "0" : strings.get("Long"));
                 String text = strings.get(strings.size()-1);
 
                 points.add(new Point(lat, lon, text));
             } catch (NumberFormatException exception){
-                exception.printStackTrace();
+                System.out.println(exception.getLocalizedMessage());
             }
         }
         return points;

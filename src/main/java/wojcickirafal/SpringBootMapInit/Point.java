@@ -1,7 +1,5 @@
 package wojcickirafal.SpringBootMapInit;
 
-import java.util.List;
-
 public class Point {
     private double lat;
     private double lon;
